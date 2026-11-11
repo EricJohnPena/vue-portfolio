@@ -1,0 +1,252 @@
+/* Globals & Theme Variables */
+:root {
+    --theme-primary: #66A3BF;    /* Mid Blue - Text, Buttons, Footer */
+    --theme-secondary: #C8DFDB;  /* Light Mint - Section Backgrounds, Badges */
+    --theme-bg: #F2EFE7;         /* Cream - Main Background, Cards */
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--theme-primary);
+    background-color: var(--theme-bg);
+}
+
+/* --- Bootstrap Utility Overrides for the New Theme --- */
+.bg-white { background-color: var(--theme-bg) !important; }
+.text-dark { color: var(--theme-primary) !important; }
+.text-muted { color: var(--theme-primary) !important; opacity: 0.75; }
+.bg-light { background-color: var(--theme-secondary) !important; }
+.text-white { color: var(--theme-bg) !important; }
+.border-top { border-top-color: var(--theme-secondary) !important; }
+
+/* --- Navbar --- */
+.logo-box {
+    background-color: var(--theme-primary);
+    color: var(--theme-bg);
+    padding: 4px 8px;
+    border-radius: 4px;
+    margin-right: 10px;
+    font-size: 0.9rem;
+}
+.nav-link {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--theme-primary) !important;
+    opacity: 0.8;
+}
+.nav-link:hover {
+    opacity: 1;
+}
+.navbar .btn-outline-dark {
+    color: var(--theme-primary);
+    border-color: var(--theme-primary);
+}
+.navbar .btn-outline-dark:hover {
+    background-color: var(--theme-primary);
+    color: var(--theme-bg);
+    border-color: var(--theme-primary);
+}
+
+/* --- Landing Section --- */
+#landing {
+    padding: 8rem 0 6rem 0;
+}
+.landing-title, .landing-subtitle {
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    max-width: 800px;
+    color: var(--theme-primary);
+}
+.landing-title {
+    font-size: 3.8rem;
+}
+.landing-subtitle {
+    font-size: 2rem;
+    font-weight: 700;
+}
+.landing-desc {
+    font-size: 1.1rem;
+    max-width: 650px;
+    line-height: 1.6;
+}
+
+/* --- Buttons --- */
+.btn-dark-custom {
+    background-color: var(--theme-primary);
+    color: var(--theme-bg);
+    border: none;
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.btn-dark-custom:hover {
+    background-color: #5289a3; /* Slightly darker shade of primary for hover state */
+    color: var(--theme-bg);
+}
+.btn-outline-custom {
+    background-color: transparent;
+    color: var(--theme-primary);
+    border: 2px solid var(--theme-primary);
+    border-radius: 6px;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+.btn-outline-custom:hover {
+    background-color: var(--theme-secondary);
+    color: var(--theme-primary);
+}
+
+/* --- Badges --- */
+.section-badge {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    background: var(--theme-secondary);
+    padding: 6px 16px;
+    border-radius: 20px;
+    color: var(--theme-primary);
+}
+
+/* --- Projects Section --- */
+.projects-section {
+    background-color: var(--theme-secondary);
+}
+.project-card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    background-color: var(--theme-bg);
+    box-shadow: 0 4px 6px -1px rgba(102, 163, 191, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 15px -3px rgba(102, 163, 191, 0.25);
+}
+.card-img{
+    height: 220px;
+}
+.tech-tags {
+    font-weight: 600;
+}
+.view-link {
+    color: var(--theme-primary) !important;
+}
+.view-link:hover {
+    text-decoration: underline !important;
+}
+
+/* --- Carousel Adjustments --- */
+.carousel-inner {
+    padding-top: 10px;
+    padding-bottom: 20px;
+}
+.carousel-indicators {
+    margin-bottom: -1rem;
+    bottom: -50px;
+}
+.carousel-indicators [data-bs-target] {
+    background-color: var(--theme-primary);
+}
+.carousel-control-prev , .carousel-control-next{
+    width: 5%;
+}
+
+/* --- Tools Section --- */
+.max-w-800 {
+    max-width: 800px;
+}
+.tool-icon-wrapper {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: var(--theme-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 0.75rem;
+    font-size: 1.75rem;
+    color: var(--theme-primary);
+    box-shadow: 0 2px 10px rgba(102, 163, 191, 0.1);
+    border: 3px solid var(--theme-bg);
+    transition: transform 0.2s, background 0.2s, color 0.2s;
+}
+.tool-icon-wrapper:hover {
+    transform: scale(1.05);
+    background: var(--theme-primary);
+    color: var(--theme-bg);
+}
+.tool-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--theme-primary);
+}
+
+/* --- Contact Section --- */
+.bg-contact-info {
+    background-color: var(--theme-secondary);
+}
+.form-control {
+    background-color: var(--theme-secondary) !important;
+    color: var(--theme-primary) !important;
+}
+.form-control::placeholder {
+    color: var(--theme-primary);
+    opacity: 0.6;
+}
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(102, 163, 191, 0.25);
+    border-color: var(--theme-primary);
+    background-color: var(--theme-bg) !important;
+}
+.contact-info-card {
+    background: var(--theme-bg);
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0 2px 5px rgba(102, 163, 191, 0.1);
+}
+.contact-icon {
+    background: var(--theme-primary);
+    color: var(--theme-bg);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+}
+.contact-form-wrapper, .contact-info-wrapper{
+    max-width: 500px; 
+    margin-top: 2rem;
+}
+.info-label {
+    font-size: 0.65rem;
+    font-weight: 700;
+    color: var(--theme-primary);
+    opacity: 0.7;
+    letter-spacing: 0.05em;
+}
+.info-value {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--theme-primary);
+}
+
+
+/* --- Footer --- */
+.bg-dark-custom {
+    background-color: var(--theme-primary);
+    color: var(--theme-bg) !important;
+}
+.footer-links a {
+    color: var(--theme-secondary) !important;
+}
+.footer-links a:hover {
+    color: var(--theme-bg) !important;
+}
